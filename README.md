@@ -1,4 +1,4 @@
-![Image of Travis-CI](https://api.travis-ci.org/garethahealy/base-java-docker.svg?branch=master)
+[![Build Status](https://travis-ci.org/garethahealy/base-java-docker.svg?branch=master)](https://travis-ci.org/garethahealy/base-java-docker)
 
 # base-java-docker
 Base image to use on all java related containers.
