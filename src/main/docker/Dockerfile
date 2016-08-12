@@ -1,4 +1,4 @@
-FROM dockerhub.io/centos:centos7
+FROM docker.io/centos:centos7
 MAINTAINER garethahealy (https://github.com/garethahealy/)
 
 RUN sudo wget -O /etc/yum.repos.d/epel-apache-maven.repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
