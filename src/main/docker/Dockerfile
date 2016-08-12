@@ -1,6 +1,8 @@
 FROM dockerhub.io/centos:centos7
 MAINTAINER garethahealy (https://github.com/garethahealy/)
 
+RUN sudo wget -O /etc/yum.repos.d/epel-apache-maven.repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
+
 RUN sudo yum makecache && \
      yum install -y deltarpm && \
      yum install -y epel-release && \
