@@ -6,13 +6,13 @@
     <parent>
         <groupId>com.garethahealy.poms</groupId>
         <artifactId>plugins-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <relativePath/>
     </parent>
     <groupId>com.garethahealy.base-java-docker</groupId>
     <artifactId>base-java-docker-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <name>GarethHealy :: Base Java Docker</name>
 
     <scm>
@@ -20,44 +20,5 @@
         <developerConnection>scm:git:https://github.com/garethahealy/base-java-docker/tree/master</developerConnection>
         <url>https://github.com/garethahealy/base-java-docker/tree/master</url>
     </scm>
-
-    <profiles>
-        <profile>
-            <id>docker-build</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jolokia</groupId>
-                        <artifactId>docker-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>build</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <images>
-                                <image>
-                                    <alias>${project.artifactId}</alias>
-                                    <name>garethahealy/${project.artifactId}</name>
-                                    <build>
-                                        <assembly>
-                                            <dockerFileDir>.</dockerFileDir>
-                                        </assembly>
-                                        <tags>
-                                            <tag>latest</tag>
-                                            <tag>${project.version}</tag>
-                                        </tags>
-                                    </build>
-                                </image>
-                            </images>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>
