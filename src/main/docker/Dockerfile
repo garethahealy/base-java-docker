@@ -3,7 +3,7 @@ MAINTAINER garethahealy (https://github.com/garethahealy/)
 
 LABEL Name="base-java-docker" \
     Vendor="com.garethahealy" \
-    Version="1.0.2"
+    Version="1.0.2" \
     License="Apache License, Version 2.0"
 
 RUN yum makecache && \
