@@ -1,6 +1,11 @@
 FROM docker.io/centos:centos7
 MAINTAINER garethahealy (https://github.com/garethahealy/)
 
+LABEL Name="base-java-docker" \
+    Vendor="com.garethahealy" \
+    Version="1.0.2"
+    License="Apache License, Version 2.0"
+
 RUN yum makecache && \
      yum install -y deltarpm && \
      yum install -y epel-release && \
@@ -12,4 +17,5 @@ RUN yum makecache && \
      yum clean all
 
 RUN wget -O /etc/yum.repos.d/epel-apache-maven.repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo && \
-     yum install -y apache-maven
+     yum install -y apache-maven && \
+     yum clean all
