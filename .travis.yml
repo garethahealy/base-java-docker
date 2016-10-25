@@ -1,4 +1,5 @@
 sudo: required
+dist: trusty
 services:
  - docker
 addons:
@@ -15,7 +16,6 @@ before_script:
   - dockerfile_lint  -f src/main/docker/Dockerfile
 script:
   - docker build --tag garethahealy/base-java-docker:latest src/main/docker/
-  - mvn clean install -Dgpg.skip=true
 cache:
   directories:
   - $HOME/.m2
