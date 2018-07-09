@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 services:
- - docker
+- docker
 addons:
   apt:
     packages:
@@ -9,13 +9,13 @@ addons:
     - npm
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 install:
-  - npm install -g dockerfile_lint
+- npm install -g dockerfile_lint
 before_script:
-  - dockerfile_lint  -f src/main/docker/Dockerfile
+- dockerfile_lint -f src/main/docker/Dockerfile
 script:
-  - docker build --tag garethahealy/base-java-docker:latest src/main/docker/
+- docker build --tag garethahealy/base-java-docker:latest src/main/docker/
 cache:
   directories:
   - $HOME/.m2

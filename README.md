@@ -6,6 +6,6 @@
 Base image to use on all java related containers.
 
 # dockerhub
-- docker build --tag garethahealy/base-java-docker:latest src/main/docker/
+- docker build --tag garethahealy/base-java-docker:latest .
 - https://registry.hub.docker.com/u/garethahealy/base-java-docker/
 
