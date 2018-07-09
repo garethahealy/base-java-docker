@@ -13,9 +13,9 @@ jdk:
 install:
 - npm install -g dockerfile_lint
 before_script:
-- dockerfile_lint -f src/main/docker/Dockerfile
+- dockerfile_lint -f Dockerfile
 script:
-- docker build --tag garethahealy/base-java-docker:latest src/main/docker/
+- docker build --tag garethahealy/base-java-docker:latest .
 cache:
   directories:
   - $HOME/.m2
