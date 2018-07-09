@@ -1,8 +1,9 @@
 FROM fabric8/java-centos-openjdk8-jdk:1.4.0
-MAINTAINER garethahealy (https://github.com/garethahealy/)
+
 
 LABEL Name="base-java-docker" \
     Vendor="com.garethahealy" \
+    Maintainer="garethahealy (https://github.com/garethahealy/)" \
     Version="1.4.0-1" \
     License="Apache License, Version 2.0"
 
