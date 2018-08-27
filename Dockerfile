@@ -3,7 +3,7 @@ FROM fabric8/java-centos-openjdk8-jdk:1.4.0
 LABEL Name="base-java-docker" \
     Vendor="com.garethahealy" \
     Maintainer="garethahealy (https://github.com/garethahealy/)" \
-    Version="1.4.0-1" \
+    Version="1.4.0-2" \
     License="Apache License, Version 2.0"
 
 # Install packages without docs. Variable is used to cause yum to fail if missing
