@@ -3,6 +3,9 @@ dist: trusty
 services:
 - docker
 language: node_js
+node_js:
+- "node"
+- "8"
 install:
 - npm install -g dockerfile_lint
 before_script:
